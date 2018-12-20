@@ -17,6 +17,7 @@ class ticketCommand extends commando.Command {
     }
     async run(message, args)
     {
+        if (!message.channel.name.startsWith(`helpdesk`)) return message.channel.send(`You can't use this command outside of a ticket channel.`);
         const reason = message.content.split(" ").slice(1).join(" ");
         if (message.guild.channels.exists("name", "ticket-" + message.author.id)) return message.channel.send("You already have a ticket open.");
         message.guild.createChannel(`ticket-${message.author.id}`, "text").then(c => {
