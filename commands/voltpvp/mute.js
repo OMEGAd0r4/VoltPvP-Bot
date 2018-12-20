@@ -29,19 +29,19 @@ class muteCommand extends commando.Command {
         if (!tempmuteuser) return message.channel.send({embed: new Discord.RichEmbed()
             .setDescription(":x: **Missing args**")
             .setColor("#FF4040")
-            .addField("->", "/mute [User] [Reason]")});
+            .addField("->", ">mute [User] [Reason]")});
 
         if (!tempmutereason) return message.channel.send({embed: new Discord.RichEmbed()
             .setDescription(":x: **Missing args**")
             .setColor("#FF4040")
-            .addField("->", "/mute [User] [Reason]")});
+            .addField("->", ">mute [User] [Reason]")});
 
         if (!message.member.roles.has(supportteamerole.id)) return message.channel.send("Insufficient permission. You do not have permission to mute others users")
 
         if (tempmuteuser.roles.has(supportteamerole.id)) return message.channel.send("Insufficient permission. You do not have permission to mute the support team members!")
 
             var tempmuteembed = new Discord.RichEmbed()
-                .setTitle("**VoltPvP | Mute**")
+                .setTitle("**VoltPvP [] Mute**")
                 .setColor("#FFDF00")
                 .setDescription(`${tempmuteuser}, Muted by ${message.author}`)
                 .addField(`**REASON:**`, "->" + tempmutereason)
