@@ -33,6 +33,80 @@ class announceCommand extends commando.Command {
     .setImage("https://cdn.discordapp.com/attachments/523073883427831809/525212118882975755/Volt_old_logo.png")
     .setTimestamp()
 
+    if (announcementmessage.includes("@everyone"))
+    {
+      announcementschannel.send("@everyone @here")
+    }
+    if (announcementmessage.includes("@Developer"))
+    {
+      announcementschannel.send("@Developer")
+    }
+    if (announcementmessage.includes("@Discord Developer"))
+    {
+      announcementschannel.send("@Discord Developer")
+    }
+    if (announcementmessage.includes("@Manager"))
+    {
+      announcementschannel.send("@Manager")
+    }
+    if (announcementmessage.includes("@Platform Admin"))
+    {
+      announcementschannel.send("@Platform Admin")
+    }
+    if (announcementmessage.includes("@Admin"))
+    {
+      announcementschannel.send("@Admin")
+    }
+    if (announcementmessage.includes("@Partner"))
+    {
+      announcementschannel.send("@Partner")
+    }
+    if (announcementmessage.includes("@Senior Mod"))
+    {
+      announcementschannel.send("@Senior Mod")
+    }
+    if (announcementmessage.includes("@Mod"))
+    {
+      announcementschannel.send("@Mod")
+    }
+    if (announcementmessage.includes("@SUPPOR TEAM"))
+    {
+      announcementschannel.send("@SUPPOR TEAM")
+    }
+    if (announcementmessage.includes("@Chat Mod"))
+    {
+      announcementschannel.send("@Chat Mod")
+    }
+    if (announcementmessage.includes("@Trial Mod"))
+    {
+      announcementschannel.send("@Trial Mod")
+    }
+    if (announcementmessage.includes("@head Builder"))
+    {
+      announcementschannel.send("@Head Builder")
+    }
+    if (announcementmessage.includes("@Builder"))
+    {
+      announcementschannel.send("@Builder")
+    }
+    if (announcementmessage.includes("@Discord Bots"))
+    {
+      announcementschannel.send("@Discord Bots")
+    }
+    if (announcementmessage.includes("@Famous"))
+    {
+      announcementschannel.send("@Famous")
+    }
+    if (announcementmessage.includes("@youtuber"))
+    {
+      announcementschannel.send("@Youtuber")
+    }
+    if (announcementmessage.includes("@Volt"))
+    {
+      announcementschannel.send("@Volt")
+    }
+    
+
     announcementschannel.send(announcementmessageembed);
   }
 }
