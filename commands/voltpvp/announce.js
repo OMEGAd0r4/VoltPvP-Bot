@@ -33,10 +33,6 @@ class announceCommand extends commando.Command {
     .setImage("https://cdn.discordapp.com/attachments/523073883427831809/525212118882975755/Volt_old_logo.png")
     .setTimestamp()
 
-    if (announcementmessage.includes("@everyone"))
-    {
-      announcementschannel.send("@everyone @here")
-    }
     if (announcementmessage.includes("@Developer"))
     {
       announcementschannel.send("@Developer")
@@ -108,6 +104,7 @@ class announceCommand extends commando.Command {
     
 
     announcementschannel.send(announcementmessageembed);
+    announcementschannel.send("@everyone @here")
   }
 }
 
