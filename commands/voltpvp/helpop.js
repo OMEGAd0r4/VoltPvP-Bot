@@ -36,7 +36,7 @@ class unmuteCommand extends commando.Command {
 
         var unmuteembed = new Discord.RichEmbed()
             .setColor("#4286f4")
-            .setTitle('**VoltPvP | Unmute**')
+            .setTitle('**VoltPvP [] Unmute**')
             .setDescription(`${unmuteuser} has been unmuted by ${message.author}`, `->`)
             
 
