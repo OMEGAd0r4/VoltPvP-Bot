@@ -44,13 +44,6 @@ class statusCommand extends commando.Command {
                     .addField("The VoltPvP network is currently online with,", "-> 0 players")
                     .setThumbnail("https://cdn.discordapp.com/attachments/523073883427831809/525212118882975755/Volt_old_logo.png")})
             }
-            else{
-                message.channel.send({embed: new Discord.RichEmbed()
-                    .setTitle("**VoltPvP | Status**")
-                    .setColor("#FFDF00")
-                    .addField("The VoltPvP network is currently under maintenance", "->")
-                    .setThumbnail("https://cdn.discordapp.com/attachments/523073883427831809/525212118882975755/Volt_old_logo.png")})
-            }
         })
     }
 }
