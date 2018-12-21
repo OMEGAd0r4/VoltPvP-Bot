@@ -19,7 +19,7 @@ class ticketCommand extends commando.Command {
     {
         if (!message.channel.name.startsWith(`helpdesk`)) return message.channel.send(`You can't use this command outside of a ticket channel.`);
         let reasonargs = message.content.slice(prefix.length).split(/ + /); //MAIN ARGS
-        let reason = reasonrags.join(" ").slice(4);
+        let reason = reasonargs.join(" ").slice(4);
         if (!reason) return message.channel.send({embed: new Discord.RichEmbed()
             .setDescription(":x: **Missing args**")
             .setColor("#FF4040")
