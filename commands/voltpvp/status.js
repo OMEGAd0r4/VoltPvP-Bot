@@ -12,7 +12,7 @@ class statusCommand extends commando.Command {
         name: 'status',
         group: 'voltpvp',
         memberName: 'status',
-        description: 'Shows the status of the Zilex Network'
+        description: 'Shows the status of the VoltPvP Network'
       });
     }
 
