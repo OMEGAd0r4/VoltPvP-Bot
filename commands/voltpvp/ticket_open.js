@@ -18,7 +18,12 @@ class ticketCommand extends commando.Command {
     async run(message, args)
     {
         if (!message.channel.name.startsWith(`helpdesk`)) return message.channel.send(`You can't use this command outside of a ticket channel.`);
-        const reason = message.content.split(" ").slice(1).join(" ");
+        const reason = message.content.split(" ").slice(4).join(" ");
+        if (!reason) return message.channel.send({embed: new Discord.RichEmbed()
+            .setDescription(":x: **Missing args**")
+            .setColor("#FF4040")
+            .addField("->", ">new [subject]")});
+            
         if (message.guild.channels.exists("name", "ticket-" + message.author.id)) return message.channel.send("You already have a ticket open.");
         message.guild.createChannel(`ticket-${message.author.id}`, "text").then(c => {
             let role = message.guild.roles.find("name", "SUPPORT TEAM");
@@ -37,8 +42,9 @@ class ticketCommand extends commando.Command {
             });
             message.channel.send(`:white_check_mark: Your ticket has been created, ${c.name}.`);
             const embed = new Discord.RichEmbed()
-            .setColor("#4286f4")
+            .setColor("#FFDF00")
             .addField(`Hey ${message.author.username}!, Your support ticket has been created, please explain th reason for this ticket and we will respond within 24h.`, `Thanks for your patience.`)
+            .addField("**__Subject__**", reason)
             .setTimestamp();
             c.send({ embed: embed });
         }).catch(console.error);
