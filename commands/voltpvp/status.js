@@ -10,7 +10,7 @@ class statusCommand extends commando.Command {
     {
       super(client, {
         name: 'status',
-        group: 'network',
+        group: 'voltpvp',
         memberName: 'status',
         description: 'Shows the status of the Zilex Network'
       });
