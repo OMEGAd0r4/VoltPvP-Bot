@@ -11,7 +11,7 @@ class suggestCommand extends commando.Command {
   {
     super(client, {
       name: 'suggest', 
-      group: 'network',
+      group: 'voltpvp',
       memberName: 'suggest',
       description: "Give the server some suggestions"
     });
