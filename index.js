@@ -31,8 +31,8 @@ bot.on('message', (message) => {
         .setTitle("**Vertus | Rank**")
         .setDescription("Buying this rank will allow you to have the permissions below")
         .setColor("#FFDF00")
-        .addField("**__Nick", "/nick")
-        .addField("**__Fly", "/fly")
+        .addField("**__Nick__**", "/nick")
+        .addField("**__Fly__**", "/fly")
         .addField("**__Host public parties__**", "[Ingame]")})
 })
 
