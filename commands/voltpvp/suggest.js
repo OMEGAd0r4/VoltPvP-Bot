@@ -30,7 +30,7 @@ class suggestCommand extends commando.Command {
 
             var suggestembed = new Discord.RichEmbed()
             .setTitle('**Suggestion | Information**')
-            .setColor("#4286f4")
+            .setColor("#FFDF00")
             .addField('**Suggested By**', `${message.author} with the ID: ${message.author.id}`)
             .addField('**User suggestion**', suggestmessage)
             .setTimestamp()
