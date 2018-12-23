@@ -31,8 +31,8 @@ class suggestCommand extends commando.Command {
             var suggestembed = new Discord.RichEmbed()
             .setTitle('**Suggestion | Information**')
             .setColor("#FFDF00")
-            .addField('**Suggested By**', `${message.author} with the ID: ${message.author.id}`)
-            .addField('**User suggestion**', suggestmessage)
+            .addField('**__Suggested By__**', `${message.author} with the ID: ${message.author.id}`)
+            .addField('**__User suggestion__**', suggestmessage)
             .setTimestamp()
 
             let logschannel = message.guild.channels.find(`name`, "logs");
