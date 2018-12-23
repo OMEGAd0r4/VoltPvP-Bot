@@ -26,7 +26,7 @@ class suggestCommand extends commando.Command {
           .setColor("#FF4040")
           .addField("->", ">suggest [suggestion]")});
 
-          if (!message.channel.name.startsWith(`suggestions`)) return message.channel.send(`You can't use the suggest command outside of a suggestions channel.`);
+          if (!message.channel.name.startsWith(`commands`)) return message.channel.send(`You can't use the suggest command outside of the commands channel.`);
 
             var suggestembed = new Discord.RichEmbed()
             .setTitle('**Suggestion | Information**')
