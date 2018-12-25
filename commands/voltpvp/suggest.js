@@ -25,9 +25,7 @@ class suggestCommand extends commando.Command {
           .setDescription(":x: **Missing args**")
           .setColor("#FF4040")
           .addField("->", ">suggest [suggestion]")});
-
-          if (!message.channel.name.startsWith(`commands`)) return message.channel.send(`You can't use the suggest command outside of the commands channel.`);
-
+    
             var suggestembed = new Discord.RichEmbed()
             .setTitle('**Suggestion | Information**')
             .setColor("#FFDF00")
