@@ -28,7 +28,9 @@ class statusCommand extends commando.Command {
             if (err) message.channel.send(err);
 
             body = JSON.parse(body);
-            
+
+
+             if (!message.channel.name.startsWith(`commands`)) return message.channel.send(`You can't use the suggest command outside of the commands channel.`);
             var status = `The VoltPvP Network is currently offline`;
             if(body.players.now){
                 message.channel.send({embed: new Discord.RichEmbed()
