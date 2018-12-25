@@ -28,15 +28,15 @@ class unmuteCommand extends commando.Command {
         if (!unmuteuser) return message.channel.send({embed: new Discord.RichEmbed()
             .setDescription(":x: **Missing args**")
             .setColor("#FF4040")
-            .addField("->", "/unmute [User]")});
+            .addField("->", ">unmute [User]")});
 
         if(!message.member.roles.has(supportteamerole.id)) return message.channel.send("Insufficient permission. You do not have permission to unmute other users")
 
         if(unmuteuser.roles.has(supportteamerole.id)) return message.channel.send("Insufficient permission. You do not have permission to unmute the support team members!");
 
         var unmuteembed = new Discord.RichEmbed()
-            .setColor("#4286f4")
-            .setTitle('**VoltPvP | Unmute**')
+            .setColor("#FFDF00")
+            .setTitle('**VoltPvP [] Unmute**')
             .setDescription(`${unmuteuser} has been unmuted by ${message.author}`, `->`)
             
 
