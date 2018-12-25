@@ -45,7 +45,7 @@ bot.on('message', (message) =>{
         .addField("**__Nick__**", "/nick")
         .addField("**__Fly__**", "/fly")
         .addField("**__Host public parties__**", "[Ingame]")
-        .addField("**__Host sumo events__**", "[Ingame]")})
+        .addField("**__Host sumo events__**", "/hostevent sumo")})
 })
 
 bot.on('message', (message) => {
@@ -57,7 +57,7 @@ bot.on('message', (message) => {
         .addField("**__Nick__**", "/nick")
         .addField("**__Fly__**", "/fly")
         .addField("**__Host public parties__**", "[Ingame]")
-        .addField("**__Host sumo events__**", "[Ingame]")
-        .addField("**__Host KOTH events__**", "[Ingame]")})
+        .addField("**__Host sumo events__**", "/hostevent sumo")
+        .addField("**__Host KOTH events__**", "/hostevent koth")})
 })
 //RANKS INFORMATION
