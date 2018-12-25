@@ -18,7 +18,7 @@ class infoCommand extends commando.Command {
 
     async run(message)
     {
-      if (!message.channel.name.startsWith(`commands`)) return message.channel.send(`You can't use this command outside of a commands channel.`);
+      if (!message.channel.name.startsWith(`commands`)) return message.channel.send(`You can't use the suggest command outside of the commands channel.`);
         message.channel.send({embed: new Discord.RichEmbed()
             .setTitle("**VoltPvP [] Information**")
             .setColor("#FFDF00")
