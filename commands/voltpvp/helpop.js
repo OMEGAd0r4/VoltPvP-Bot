@@ -18,7 +18,7 @@ class helpopCommand extends commando.Command {
 
   async run(message,args)
   {
-     if (!message.channel.name.startsWith(`commands`)) return message.channel.send(`You can't use this command outside of a commands channel.`);
+    if (!message.channel.name.startsWith(`commands`)) return message.channel.send(`You can't use the suggest command outside of the commands channel.`);
     let requestargs = message.content.slice(prefix.length).split(/ + /); //MAIN ARGS
         let requestmessage = requestargs.join(" ").slice(7);
         if (!requestmessage) return message.channel.send({embed: new Discord.RichEmbed()
@@ -27,7 +27,7 @@ class helpopCommand extends commando.Command {
           .addField("->", ">helpop [request]")});
 
             var requestembed = new Discord.RichEmbed()
-            .setTitle('**VoltPvP [] Requestop**')
+            .setTitle('**VoltPvP [] Helpop**')
             .setColor("#FFDF00")
             .addField('**__Request By__**', `${message.author} with the ID: ${message.author.id}`)
             .addField('**__User Request__**', requestmessage)
