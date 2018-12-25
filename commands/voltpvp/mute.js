@@ -40,6 +40,7 @@ class muteCommand extends commando.Command {
 
         if (tempmuteuser.roles.has(supportteamerole.id)) return message.channel.send("Insufficient permission. You do not have permission to mute the support team members!")
 
+        if (!message.channel.name.startsWith(`commands`)) return message.channel.send(`You can't use the suggest command outside of the commands channel.`);
             var tempmuteembed = new Discord.RichEmbed()
                 .setTitle("**VoltPvP [] Mute**")
                 .setColor("#FFDF00")
