@@ -18,6 +18,11 @@ class unmuteCommand extends commando.Command {
 
     async run(message, args)
     {
+        if (!message.channel.name.startsWith(`commands`))
+      {
+        message.delete().catch(O_o=>{});
+        message.channel.send(`You can't use this command outside of the commands channel.`);
+      }
         var unmuteargs = message.content.slice(prefix.length).split(/ + /); //MAIN ARGS
         var unmuteuser = message.guild.member(message.mentions.users.first() || message.guild.members.get(unmuteargs[0]));
         var unmuterole = message.guild.roles.find(`name`, "Muted");
