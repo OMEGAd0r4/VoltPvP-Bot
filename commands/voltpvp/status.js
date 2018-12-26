@@ -18,6 +18,11 @@ class statusCommand extends commando.Command {
 
     async run(message)
     {
+        if (!message.channel.name.startsWith(`commands`))
+      {
+        message.delete().catch(O_o=>{});
+        message.channel.send(`You can't use this command outside of the commands channel.`);
+      }
         //npm install request --save
         var request = require("request");
         var mcIP = "voltpvp.mymc.io";
