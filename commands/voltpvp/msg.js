@@ -21,7 +21,7 @@ class msgCommand extends commando.Command {
   {
         var msguser = message.guild.member(message.mentions.users.first()) 
         var msgargs = message.content.slice(prefix.length).split(/ + /); //MAIN ARGS
-        var msgmessage = suggestargs.join(" ").slice(4);
+        var msgmessage = msgargs.join(" ").slice(4);
 
         var supportteamrole = message.guild.roles.find(`name`, "SUPPORT TEAM");
         if (!message.member.roles.has(supportteamrole.id)) return message.channel.send("Insufficient permission. You do not have permission to privately msg to members");
