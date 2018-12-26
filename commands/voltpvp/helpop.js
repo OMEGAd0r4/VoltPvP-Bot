@@ -19,9 +19,9 @@ class helpopCommand extends commando.Command {
   async run(message,args)
   {
     if (!message.channel.name.startsWith(`commands`))
-      {
-        message.delete().catch(O_o=>{});
+    {
         message.channel.send(`You can't use this command outside of the commands channel.`);
+        message.delete().catch(O_o=>{});
       }
     let requestargs = message.content.slice(prefix.length).split(/ + /); //MAIN ARGS
         let requestmessage = requestargs.join(" ").slice(7);
