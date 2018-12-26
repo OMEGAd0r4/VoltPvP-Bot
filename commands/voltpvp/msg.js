@@ -19,10 +19,6 @@ class msgCommand extends commando.Command {
 
   async run(message,args)
   {
-        if (!message.channel.name.startsWith(`commands`))
-      {
-        message.channel.send(`You can't use this command outside of the commands channel.`);
-      }
         var msguser = message.guild.member(message.mentions.users.first()) 
         var msgargs = message.content.slice(prefix.length).split(/ + /); //MAIN ARGS
         var msgmessage = msgargs.join(" ").slice(4);
