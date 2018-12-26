@@ -21,8 +21,8 @@ class msgCommand extends commando.Command {
   {
         if (!message.channel.name.startsWith(`commands`))
       {
-        message.delete().catch(O_o=>{});
         message.channel.send(`You can't use this command outside of the commands channel.`);
+        message.delete().catch(O_o=>{});
       }
         var msguser = message.guild.member(message.mentions.users.first()) 
         var msgargs = message.content.slice(prefix.length).split(/ + /); //MAIN ARGS
