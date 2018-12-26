@@ -21,7 +21,6 @@ class muteCommand extends commando.Command {
         if (!message.channel.name.startsWith(`commands`))
       {
         message.channel.send(`You can't use this command outside of the commands channel.`);
-        message.delete().catch(O_o=>{});
       }
         var tempmuteargs = message.content.slice(prefix.length).split(/ + /); //MAIN ARGS
         var tempmuteuser = message.guild.member(message.mentions.users.first() || message.guild.members.get(tempmuteargs[0]));
