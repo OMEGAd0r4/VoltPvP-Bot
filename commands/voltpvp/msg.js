@@ -26,10 +26,15 @@ class msgCommand extends commando.Command {
         var supportteamrole = message.guild.roles.find(`name`, "SUPPORT TEAM");
         if (!message.member.roles.has(supportteamrole.id)) return message.channel.send("Insufficient permission. You do not have permission to privately msg to members");
 
+        if (!msguser) return message.channel.send({embed: new Discord.RichEmbed()
+          .setDescription(":x: **Missing args**")
+          .setColor("#FF4040")
+          .addField("->", ">msg [User] [message]")});
+
         if (!msgmessage) return message.channel.send({embed: new Discord.RichEmbed()
             .setDescription(":x: **Missing args**")
             .setColor("#FF4040")
-            .addField("->", ">msg [message]")});
+            .addField("->", ">msg [User] [message]")});
 
         msguser.sendMessage({embed: new Discord.RichEmbed()
           .setTitle("**VoltPvP [] Private Message**")
