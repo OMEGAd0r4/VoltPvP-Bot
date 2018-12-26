@@ -18,10 +18,6 @@ class muteCommand extends commando.Command {
 
     async run(message, args)
     {
-        if (!message.channel.name.startsWith(`commands`))
-      {
-        message.channel.send(`You can't use this command outside of the commands channel.`);
-      }
         var tempmuteargs = message.content.slice(prefix.length).split(/ + /); //MAIN ARGS
         var tempmuteuser = message.guild.member(message.mentions.users.first() || message.guild.members.get(tempmuteargs[0]));
         var tempmutereason = tempmuteargs.join(" ").slice(26);
