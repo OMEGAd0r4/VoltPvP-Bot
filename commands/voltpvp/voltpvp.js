@@ -21,7 +21,6 @@ class infoCommand extends commando.Command {
       if (!message.channel.name.startsWith(`commands`))
       {
         message.channel.send(`You can't use this command outside of the commands channel.`);
-        message.delete().catch(O_o=>{});
       }
       if (!message.channel.name.startsWith(`commands`)) return message.channel.send(`You can't use the info command outside of the commands channel.`);
         message.channel.send({embed: new Discord.RichEmbed()
