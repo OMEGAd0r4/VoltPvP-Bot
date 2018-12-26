@@ -40,6 +40,8 @@ class msgCommand extends commando.Command {
           .setTitle("**VoltPvP [] Private Message**")
           .setColor("#FFDF00")
           .addField("**Message**", msgmessage)})
+    
+       message.delete(3000);
 
   }
 }
