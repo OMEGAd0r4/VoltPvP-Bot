@@ -34,6 +34,12 @@ bot.on('message', (message) => {
         .addField("**__Nick__**", "/nick")
         .addField("**__Fly__**", "/fly")
         .addField("**__Host public parties__**", "[Ingame]")})
+    
+    if (!message.channel.name.startsWith(`commands`))
+      {
+        message.delete().catch(O_o=>{});
+        message.channel.send(`You can't use this command outside of the commands channel.`);
+      }
 })
 
 bot.on('message', (message) =>{
@@ -46,6 +52,12 @@ bot.on('message', (message) =>{
         .addField("**__Fly__**", "/fly")
         .addField("**__Host public parties__**", "[Ingame]")
         .addField("**__Host sumo events__**", "/hostevent sumo")})
+    
+    if (!message.channel.name.startsWith(`commands`))
+      {
+        message.delete().catch(O_o=>{});
+        message.channel.send(`You can't use this command outside of the commands channel.`);
+      }
 })
 
 bot.on('message', (message) => {
@@ -59,5 +71,11 @@ bot.on('message', (message) => {
         .addField("**__Host public parties__**", "[Ingame]")
         .addField("**__Host sumo events__**", "/hostevent sumo")
         .addField("**__Host KOTH events__**", "/hostevent koth")})
+    
+    if (!message.channel.name.startsWith(`commands`))
+      {
+        message.delete().catch(O_o=>{});
+        message.channel.send(`You can't use this command outside of the commands channel.`);
+      }
 })
 //RANKS INFORMATION
